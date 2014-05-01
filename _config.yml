@@ -1,8 +1,8 @@
 title:            AngWei's homepage 
 description:      Describe your website.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-#url:              http://localhost:4000
-url:               https://weiang.github.com
+url:              http://localhost:4000
+#url:               https://weiang.github.com
 disqus_shortname: 
 
 # Owner/author information
