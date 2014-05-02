@@ -2,26 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 <title type="text">AngWei's homepage</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
-<link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-05-02T00:41:53+08:00</updated>
-<id>http://localhost:4000/</id>
+<link rel="self" type="application/atom+xml" href="http://home.ustc.edu.cn/~weiang/feed.xml" />
+<link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang" />
+<updated>2014-05-02T09:36:23+08:00</updated>
+<id>http://home.ustc.edu.cn/~weiang/</id>
 <author>
   <name>Ang Wei</name>
-  <uri>http://localhost:4000/</uri>
+  <uri>http://home.ustc.edu.cn/~weiang/</uri>
   <email>weiang123@gmail.com</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Ruby变量作用域]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/" />
-  <id>http://localhost:4000/Ruby变量作用域</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/" />
+  <id>http://home.ustc.edu.cn/~weiang/Ruby变量作用域</id>
   <published>2013-12-30T00:00:00+08:00</published>
   <updated>2013-12-30T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;h1 id=&quot;ruby&quot;&gt;Ruby中变量的作用域&lt;/h1&gt;
@@ -164,19 +164,19 @@ Ruby中实例变量以’@’为前缀：&lt;/p&gt;
 &lt;p&gt;Ruby中的常量是一旦被赋值后就不“应该”被改变的变量。但是Ruby不同于大多数编程语言，它允许常量在声明后依然可以被修改。Ruby解释器只是弹出一个警告信息来表示轻微的抗议。
 声明在类或模块(module)中的常量可以在类或模块的上下文中的任何地方使用。声明在类和模块之外的常量具有全局作用域。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/&quot;&gt;Ruby变量作用域&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on December 30, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/&quot;&gt;Ruby变量作用域&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on December 30, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[G++'s two-stage name lookup]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/reserved/gs-two-stage-name-lookup/" />
-  <id>http://localhost:4000/reserved/gs-two-stage-name-lookup</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/gs-two-stage-name-lookup/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/gs-two-stage-name-lookup</id>
   <published>2013-12-17T00:00:00+08:00</published>
   <updated>2013-12-17T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;转自:&lt;a href=&quot;http://gcc.gnu.org/onlinedocs/gcc/Name-lookup.html&quot;&gt;http://gcc.gnu.org/onlinedocs/gcc/Name-lookup.html&lt;/a&gt;&lt;/p&gt;
@@ -238,19 +238,19 @@ Ruby中实例变量以’@’为前缀：&lt;/p&gt;
 &lt;p&gt;Note that some compilers (including G++ versions prior to 3.4) get these examples wrong and accept above code without an error. Those compilers do not implement two-stage name lookup correctly.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/reserved/gs-two-stage-name-lookup/&quot;&gt;G++'s two-stage name lookup&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on December 17, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/gs-two-stage-name-lookup/&quot;&gt;G++'s two-stage name lookup&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on December 17, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Sublime text cmd]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/reserved/sublime-text-cmd/" />
-  <id>http://localhost:4000/reserved/sublime-text-cmd</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/sublime-text-cmd/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/sublime-text-cmd</id>
   <published>2013-11-13T00:00:00+08:00</published>
   <updated>2013-11-13T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Sublime Text 2 快捷键用法大全&lt;/p&gt;
@@ -364,19 +364,19 @@ import urllib2,os;pf=’Package Control.sublime-package’;ipp=sublime.installed
 14、Git&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/reserved/sublime-text-cmd/&quot;&gt;Sublime text cmd&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on November 13, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/sublime-text-cmd/&quot;&gt;Sublime text cmd&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on November 13, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[VIM COPY]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/reserved/vim-copy/" />
-  <id>http://localhost:4000/reserved/vim-copy</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/vim-copy/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/vim-copy</id>
   <published>2013-11-08T00:00:00+08:00</published>
   <updated>2013-11-08T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;h1 id=&quot;vim&quot;&gt;VIM复制粘贴大全&lt;/h1&gt;
@@ -415,55 +415,55 @@ vim有12个粘贴板，分别是0、1、2、…、9、a、“、＋；用:reg命
 按下来就可以用 p （指定粘贴板为”1v 引号不能少）命令随便粘贴了（1为指下粘贴板名）&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/reserved/vim-copy/&quot;&gt;VIM COPY&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on November 08, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/vim-copy/&quot;&gt;VIM COPY&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on November 08, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Finding Comments in Source Code Using Regular Expressions]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/reserved/finding-comments-in-source-code-using-regular-expressions/" />
-  <id>http://localhost:4000/reserved/finding-comments-in-source-code-using-regular-expressions</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/finding-comments-in-source-code-using-regular-expressions/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/finding-comments-in-source-code-using-regular-expressions</id>
   <published>2013-11-08T00:00:00+08:00</published>
   <updated>2013-11-08T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://ostermiller.org/findcomment.html&quot;&gt;http://ostermiller.org/findcomment.html&lt;/a&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/reserved/finding-comments-in-source-code-using-regular-expressions/&quot;&gt;Finding Comments in Source Code Using Regular Expressions&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on November 08, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/finding-comments-in-source-code-using-regular-expressions/&quot;&gt;Finding Comments in Source Code Using Regular Expressions&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on November 08, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[11个很少人知道但很有用的Linux命令]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/reserved/11/" />
-  <id>http://localhost:4000/reserved/11</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/11/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/11</id>
   <published>2013-10-30T00:00:00+08:00</published>
   <updated>2013-10-30T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://blog.jobbole.com/50632/&quot;&gt;http://blog.jobbole.com/50632/&lt;/a&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/reserved/11/&quot;&gt;11个很少人知道但很有用的Linux命令&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on October 30, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/11/&quot;&gt;11个很少人知道但很有用的Linux命令&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on October 30, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[job]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/reserved/job/" />
-  <id>http://localhost:4000/reserved/job</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/job/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/job</id>
   <published>2013-10-26T00:00:00+08:00</published>
   <updated>2013-10-26T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;写这篇文章源于某条微博评论，原内容大概是一个快40岁的人还在当程序员写代码，评论内容大概是：有些人就喜欢当程序员写代码，无可厚非。但是，现实情况中是否真的能做到“无可厚非”呢？我思考了一阵子以后，就有了这篇文章，希望与所有职场人共勉。&lt;/p&gt;
@@ -511,19 +511,19 @@ vim有12个粘贴板，分别是0、1、2、…、9、a、“、＋；用:reg命
 &lt;p&gt;2012.8.26 凌晨 by 熊绎&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/reserved/job/&quot;&gt;job&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on October 26, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/job/&quot;&gt;job&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on October 26, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[老码农教你学英语]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/reserved/new-post/" />
-  <id>http://localhost:4000/reserved/new-post</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/new-post/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/new-post</id>
   <published>2013-10-23T00:00:00+08:00</published>
   <updated>2013-10-23T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://blog.jobbole.com/45296/&quot;&gt;http://blog.jobbole.com/45296/&lt;/a&gt;&lt;/p&gt;
@@ -638,19 +638,19 @@ vim有12个粘贴板，分别是0、1、2、…、9、a、“、＋；用:reg命
 &lt;p&gt;关于码农如何学好英语，我就先说这么多吧。最后再总结一下，英语学习是一个终身的事业，只有通过痛苦的起步阶段，慢慢把它变成你的一个爱好，才能持久下去。等到它真正成为你喜爱的东西了，你就会发现眼中的世界从此变得不同。它变大了，变得多样化了，也变得更美好了。这时，所有的努力和坚持都有了回报。&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/reserved/new-post/&quot;&gt;老码农教你学英语&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on October 23, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/new-post/&quot;&gt;老码农教你学英语&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on October 23, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[回车(carriage return)和换行(line feed)有什么区别]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/reserved/rn/" />
-  <id>http://localhost:4000/reserved/rn</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/rn/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/rn</id>
   <published>2013-10-18T00:00:00+08:00</published>
   <updated>2013-10-18T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://javaeye-mao.iteye.com/blog/211354&quot;&gt;http://javaeye-mao.iteye.com/blog/211354&lt;/a&gt;&lt;/p&gt;
@@ -695,36 +695,36 @@ xixi
 &lt;/code&gt;&lt;/pre&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/reserved/rn/&quot;&gt;回车(carriage return)和换行(line feed)有什么区别&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on October 18, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/rn/&quot;&gt;回车(carriage return)和换行(line feed)有什么区别&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on October 18, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Greedy Algorithms]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/algorithms%20design/greedy-algorithms/" />
-  <id>http://localhost:4000/algorithms%20design/greedy-algorithms</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/algorithms%20design/greedy-algorithms/" />
+  <id>http://home.ustc.edu.cn/~weiang/algorithms%20design/greedy-algorithms</id>
   <published>2013-10-16T00:00:00+08:00</published>
   <updated>2013-10-16T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/algorithms%20design/greedy-algorithms/&quot;&gt;Greedy Algorithms&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on October 16, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/algorithms%20design/greedy-algorithms/&quot;&gt;Greedy Algorithms&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on October 16, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Five Steps to Successful Writing]]></title>
-  <link rel="alternate" type="text/html" href="http://localhost:4000/technical%20writing/five-steps-to-successful-writing/" />
-  <id>http://localhost:4000/technical%20writing/five-steps-to-successful-writing</id>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/technical%20writing/five-steps-to-successful-writing/" />
+  <id>http://home.ustc.edu.cn/~weiang/technical%20writing/five-steps-to-successful-writing</id>
   <published>2013-10-16T00:00:00+08:00</published>
   <updated>2013-10-16T00:00:00+08:00</updated>
   <author>
     <name>Ang Wei</name>
-    <uri>http://localhost:4000</uri>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
     <email>weiang123@gmail.com</email>
   </author>
   <content type="html">&lt;p&gt;Successful writing on the job is not the product of inspiration, nor is it
@@ -739,7 +739,7 @@ memrly the spoken word converted to print; It is the result of knowing how to st
 &lt;/code&gt;&lt;/pre&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/technical%20writing/five-steps-to-successful-writing/&quot;&gt;Five Steps to Successful Writing&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://localhost:4000&quot;&gt;AngWei's homepage&lt;/a&gt; on October 16, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/technical%20writing/five-steps-to-successful-writing/&quot;&gt;Five Steps to Successful Writing&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;AngWei's homepage&lt;/a&gt; on October 16, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
