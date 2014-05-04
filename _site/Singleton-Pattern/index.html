@@ -1,0 +1,298 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Singleton Pattern &#8211; AngWei's homepage</title>
+<meta name="description" content="">
+<meta name="keywords" content="jekyll, tutorial, reading, design pattern">
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Singleton Pattern">
+<meta property="og:description" content="Describe your website.">
+<meta property="og:url" content="https://weiang.github.com/Singleton-Pattern/">
+<meta property="og:site_name" content="AngWei's homepage">
+
+
+
+
+
+<link rel="canonical" href="https://weiang.github.com/Singleton-Pattern/">
+<link href="https://weiang.github.com/feed.xml" type="application/atom+xml" rel="alternate" title="AngWei's homepage Feed">
+<link rel="author" href="http://plus.google.com/+weiang123@gmail.com?rel=author">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://weiang.github.com/assets/css/main.min.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="https://weiang.github.com/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="https://weiang.github.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="https://weiang.github.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://weiang.github.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://weiang.github.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://weiang.github.com/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://weiang.github.com/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://weiang.github.com/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://weiang.github.com/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="https://weiang.github.com">AngWei's homepage</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+				<li><a href="https://weiang.github.com/about/" >About</a></li>
+		        
+				<li><a href="https://weiang.github.com/posts/" >Posts</a></li>
+		        
+				<li><a href="https://weiang.github.com/my-work/" >My Work</a></li>
+		        
+				<li><a href="https://weiang.github.com/hobbies/" >hobbies</a></li>
+		        
+				<li><a href="https://weiang.github.com/theme-setup/" >theme-setup</a></li>
+		        
+				<li><a href="http://mademistakes.com" target="_blank">Made Mistakes</a></li>
+		        
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+  <div class="image-wrap">
+  <img src=
+    
+      "https://weiang.github.com/images/texture-feature-05.jpg"
+    
+  alt="Singleton Pattern feature image">
+  
+    <span class="image-credit">Photo Credit: <a href="http://texturelovers.com">Texture Lovers</a></span>
+  
+  </div><!-- /.image-wrap -->
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+	<img src="https://weiang.github.com/images/bio-photo.jpg" class="bio-photo" alt="Ang Wei bio photo"></a>
+
+<h3>Ang Wei</h3>
+<p>Just do it!</p>
+
+<a href="http://facebook.com/527550265@qq.com" class="author-social" target="_blank"><i class="icon-facebook"></i> Facebook</a>
+<a href="http://plus.google.com/+weiang123@gmail.com" class="author-social" target="_blank"><i class="icon-google-plus"></i> Google+</a>
+
+
+
+<a href="http://github.com/weiang" class="author-social" target="_blank"><i class="icon-github"></i> Github</a>
+
+
+
+
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="https://weiang.github.com/Singleton-Pattern/" rel="bookmark" title="Singleton Pattern">Singleton Pattern</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <blockquote>
+  <p><strong>Singleton Pattern</strong> 
+  Ensure a class only has one instance and provide a global point of access to it.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="singleton">为什么需要Singleton模式</h2>
+<p>定义类的唯一目的就是可以用它作为模板来创建对象,而利用Singleton模式实现的类只创建和维护一个对象,这是不是有违定义类的初衷?其实不然,多数情况下类存在的目的是以其为模板创建该类对象的实例,而某些特定的引用场合下,如果一个类存在多个实例对象可能会对系统产生负面影响,甚至导致错误的发生.如在针对操作系统线程池的应用中,如果系统中存在多个线程池显然是错误的.当然有时系统中存在多个对象并不发生错误,但可能占用过多的系统资源导致资源利用率不高,这些都不是我们期望发生的,所以在面向对象的编程中引入了Singleton模式来解决这些问题.</p>
+
+<hr />
+
+<h2 id="singleton-1">单线程下的Singleton模式</h2>
+
+<p>在不考虑多线程的情况下,有一种简单直观的实现方式,如下:</p>
+
+<pre><code>public class Singleton {
+    private static Singleton uniqueInstance;
+    
+    private Singleton() {}
+    
+    public static Singleton getInstance() {
+        if (uniqueInstance == null) {
+            uniqueInstance = new Singleton();
+        }
+        return uniqueInstance;
+    }
+}
+</code></pre>
+
+<p>这里有几点需要说明</p>
+
+<ol>
+  <li>Singleton类使用一个静态私有的变量(uniqueInstance)来引用这个唯一的实例对象.</li>
+  <li>将Singleton类的构造函数声明为private来阻止其他类来创建该类的对象.</li>
+  <li>通过类方法getInstance()来引用这个唯一的对象.当第一次调用这个方法时,由于该类对象还没有创建,需先创建.</li>
+</ol>
+
+<hr />
+
+<h2 id="singleton-2">多线程下的Singleton模式</h2>
+<p>上节中的实现并不是线程安全的.所谓线程安全是指多线程模型下程序也能正确运行.那什么是多线程呢?即一个进程中存在多个共享数据的执行流同时在执行.在这种程序执行模型下,由于线程之间共享数据,这时就不得不考虑他们直接对数据的访问顺序对程序逻辑正确性的影响.带着这样的考量,我们来重新审视之前关于Singleton模式的实现.
+  考虑这样一种情景,一个进程中两个线程同时调用getInstance()方法来引用唯一的实例对象,而在这之前实例对象还未被创建.存不存在一种线程执行序列创建多于一个的实例对象?不妨令两个线程A和B,在A线程执行完if条件句发现还没有实例对象被创建时,它将执行之后的创建语句.而在执行创建语句之前B线程也执行if条件句,由于这是实例对象还没被创建,所以B线程也会执行之后的创建语句.这样就创建两个实例对象了,这显然不是我们预料之中的.那么怎样解决这个问题呢?下面是三种常见的做法,需要根据具体的应用情景来选择合适的方案.</p>
+
+<h3 id="getinstancesynchronize">1. 将getInstance()声明为<em>synchronize</em>方法</h3>
+<p>通过将getInstance()声明为<em>synchronize</em>方法可以保证不同线程在调用getInstance()方法时只有一个可以执行，其他的线程等待执行该方法的线程完成,这时显然已经创建新的实例对象了,之后线程执行if语句时不可能为真,即不可能执行之后的创建语句.</p>
+
+<p>这种实现的优点是:简单,通用.但缺点也非常明显:同步的代价是巨大的,它会大大降低了程序的运行效率(某些情况下可使程序的运行效率降低100倍).因为这种方案没有考虑只须在实例对象未创建的时候调用getInstance()需要这种同步操作,一旦实例变量创建之后,getInstance()方法的唯一作用就是返回该实例对象的引用,这时这种同步操作就显得多余而且效率低下了.所以只有当不太关心getInstance()方法的性能对程序运行效率的影响时才采用这种方法.</p>
+
+<h3 id="singletongetinstance">2. 尽早的创建Singleton中唯一的实例对象,而不是把这任务交给getInstance()方法来完成</h3>
+<p>这种做法是在Singleton类被载入时就由<strong>JVM</strong>来完成对唯一对象的实例化.具体实现如下:</p>
+
+<pre><code>public class Singleton {
+    private static Singleton uniqueInstance = new Singleton();
+    
+    private Singleton() {}
+    
+    public static Singleton getInstance() {
+        return uniqueInstance;
+    }
+}
+</code></pre>
+
+<p>这样做的好处也是显而易见的:将创建对象的任务交给<strong>JVM</strong>在载入对象时完成,有效的避免了多个线程竞争调用getInstance()方法创建对象现象的发生(这里可能引入其他问题,后面有讨论).但过早的创建对象也是有代价的,特别是当Singleton对象占用系统稀缺资源如线程池,cache等时.过早的创建这些对象占用系统资源可能会造成资源使用率不高的现象.</p>
+
+<h3 id="getinstance">3. 采用双锁来减少线程在调用getInstance()方法时的等待</h3>
+<p>这种方案从某种程度上来说时针对方案一中线程调用getInstance()方法时等待过长的改进.具体实现如下:</p>
+
+<pre><code>public class Singleton {
+    private volatile static Singleton uniqueInstance;
+    
+    private Singleton() {}
+    
+    public static Singleton getInstance() {
+        if (uniqueInstance == null) {
+            synchronize (Singleton.class);
+            if (uniqueInstance == null) {
+                uniqueInstance = new Singleton();
+            }
+        }
+        return uniqueInstance;
+    }
+}
+</code></pre>
+
+<p>相较方案一,getInstance()方法已不在是<em>synchronize</em>方法了,多个线程可以同时调用并执行它,只有当Singleton对象还未创建时(第一个if语句为真)其他线程才需要等待.并且一旦对象创建之后再也不会执行同步语句(第一个if语句恒为假).有效的消除了对象创建后调用getInstance()时额外的线程等待开销对程序性能的影响.但是相较方案一而言程序的复杂度稍有提高.</p>
+
+<p>以上三种方案实现的Singleton类都是线程安全的,并且能够按照我们的预期行为.所以三种方案都可应用于具体应用中,具体采用那种当根据特定应用的特点来选择合适的方案.如为了保证应用的简洁性而效率又不是很重要时可采用方案一.当Singleton类所占资源不是系统的稀缺资源时可以采用方案二.当应用程序很关心性能和资源的使用率时,可采用较复杂的方案三.</p>
+
+<p>另外,这里还有一点需要交代.上述方案二的正确性是建立在只有一个class loader的前提下的.不排除存在两个class loader同时载入Singleton类,这时系统中就同时存在两个Singleton对象了,这并不是我们想要的.  </p>
+
+<hr />
+
+<h2 id="section">总结</h2>
+<ol>
+  <li>Singleton模式保证系统中某个类最多存在一个对象.</li>
+  <li>Java对Singleton模式的实现使用了private构造器,static方法和static变量.</li>
+  <li>多线程应用下实现Singleton模式时要选择合适的方案来满足性能和资源的限制.</li>
+  <li>当你的应用中使用了过多的Singleton模式时,你应该停下来考虑你的设计是否合理.</li>
+</ol>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+	<img src="https://weiang.github.com/images/bio-photo.jpg" class="bio-photo" alt="Ang Wei bio photo"></a>
+
+<h3>Ang Wei</h3>
+<p>Just do it!</p>
+
+<a href="http://facebook.com/527550265@qq.com" class="author-social" target="_blank"><i class="icon-facebook"></i> Facebook</a>
+<a href="http://plus.google.com/+weiang123@gmail.com" class="author-social" target="_blank"><i class="icon-google-plus"></i> Google+</a>
+
+
+
+<a href="http://github.com/weiang" class="author-social" target="_blank"><i class="icon-github"></i> Github</a>
+
+
+
+
+
+
+        </div>
+        <p class="byline"><strong>Singleton Pattern</strong> was published on <time datetime="2014-05-03T00:00:00+08:00">May 03, 2014</time> and last modified on <time datetime="2014-05-03">May 03, 2014</time> by <a href="https://weiang.github.com/about" title="About Ang Wei">Ang Wei</a>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="https://weiang.github.com/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="https://weiang.github.com/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/" title="Ruby变量作用域">Ruby变量作用域</a></li>
+    
+      <li><a href="https://weiang.github.com/reserved/gs-two-stage-name-lookup/" title="G++'s two-stage name lookup">G++'s two-stage name lookup</a></li>
+    
+      <li><a href="https://weiang.github.com/reserved/sublime-text-cmd/" title="Sublime text cmd">Sublime text cmd</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  <footer>
+    <div id="clustrmaps-widget"></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://weiang.github.com', 'user' : 1141657, 'server' : '2', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2014-05-01', 'lang' : 'zh', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www2.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www2.clustrmaps.com/user/e8d116b99"><img src="http://www2.clustrmaps.com/stats/maps-no_clusters/weiang.github.com-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+
+<span>&copy; 2014 Ang Wei. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="https://weiang.github.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="https://weiang.github.com/assets/js/scripts.min.js"></script>
+
+
+  
+	        
+
+</body>
+</html>
