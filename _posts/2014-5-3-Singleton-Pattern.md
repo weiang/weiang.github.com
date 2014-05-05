@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Singleton Pattern 
-description:  
+description: "Ensure a class only has one instance and provide a global point of access to it."
 modified: 2014-05-3
 tags: [jekyll, tutorial, reading, design pattern]
 comments: true

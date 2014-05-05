@@ -4,7 +4,7 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="https://weiang.github.com/feed.xml" />
 <link rel="alternate" type="text/html" href="https://weiang.github.com" />
-<updated>2014-05-05T00:24:11+08:00</updated>
+<updated>2014-05-05T12:45:06+08:00</updated>
 <id>https://weiang.github.com/</id>
 <author>
   <name>Ang Wei</name>
@@ -132,17 +132,35 @@
 
 
 <entry>
-  <title type="html"><![CDATA[Ruby变量作用域]]></title>
+  <title type="html"><![CDATA[Ruby中变量的作用域]]></title>
   <link rel="alternate" type="text/html" href="https://weiang.github.com/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/" />
   <id>https://weiang.github.com/Ruby变量作用域</id>
+  <updated>2014-05-4T00:00:00-00:00</updated>
   <published>2013-12-30T00:00:00+08:00</published>
-  <updated>2013-12-30T00:00:00+08:00</updated>
+  
   <author>
     <name>Ang Wei</name>
     <uri>https://weiang.github.com</uri>
     <email>weiang123@gmail.com</email>
   </author>
-  <content type="html">&lt;h1 id=&quot;ruby&quot;&gt;Ruby中变量的作用域&lt;/h1&gt;
+  <content type="html">&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Contents&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;div id=&quot;drawer&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#variable-scope&quot;&gt;1 什么是变量作用域(variable scope)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ruby&quot;&gt;2 检查Ruby中的变量作用域&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubylocal-variables&quot;&gt;3 Ruby局部变量(local variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubyglobal-variables&quot;&gt;4 Ruby全局变量(global variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubyclass-variables&quot;&gt;5 Ruby类变量(class variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubyinstance-variables&quot;&gt;6 Ruby实例变量(instance variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubyconstant-variabes&quot;&gt;7 Ruby常量变量(constant variabes)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- /#table-of-contents --&gt;
 
 &lt;h2 id=&quot;variable-scope&quot;&gt;1 什么是变量作用域(variable scope)&lt;/h2&gt;
 &lt;p&gt;作用域定义了一个变量在程序中的可访问范围。Ruby中有四种类型的变量作用域：&lt;em&gt;局部(local),全局(global),实例(instance)和类(class)&lt;/em&gt;。通过在变量名前加上不同的特殊字符来声明不同的变量类型。如下表：&lt;/p&gt;
@@ -175,7 +193,7 @@
 
 &lt;p&gt;除此之外，Ruby还有两个不能被赋值的&lt;em&gt;伪变量(pseudo-variables)&lt;/em&gt;，&lt;em&gt;nil&lt;/em&gt;和&lt;em&gt;self&lt;/em&gt;。&lt;em&gt;nil&lt;/em&gt;用来表示未初始化的变量，&lt;em&gt;self&lt;/em&gt;用来引用正在执行的对象。&lt;/p&gt;
 
-&lt;h2 id=&quot;ruby-1&quot;&gt;2 检查Ruby中的变量作用域&lt;/h2&gt;
+&lt;h2 id=&quot;ruby&quot;&gt;2 检查Ruby中的变量作用域&lt;/h2&gt;
 &lt;p&gt;通过观察变量名可以区分不同变量的作用域。但有些时候需要通过编程的方式来获得一个变量的作用域。Ruby提供了一个有效的函数&lt;em&gt;define?&lt;/em&gt;来达到这个目的。&lt;em&gt;define?&lt;/em&gt;函数返回被引用变量的作用域。如果变量在当前上下文(current context)中没用被定义，则&lt;em&gt;define?&lt;/em&gt;返回&lt;em&gt;nil&lt;/em&gt;。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;x = 10
@@ -282,7 +300,7 @@ Ruby中实例变量以’@’为前缀：&lt;/p&gt;
 &lt;p&gt;Ruby中的常量是一旦被赋值后就不“应该”被改变的变量。但是Ruby不同于大多数编程语言，它允许常量在声明后依然可以被修改。Ruby解释器只是弹出一个警告信息来表示轻微的抗议。
 声明在类或模块(module)中的常量可以在类或模块的上下文中的任何地方使用。声明在类和模块之外的常量具有全局作用域。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/&quot;&gt;Ruby变量作用域&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on December 30, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/&quot;&gt;Ruby中变量的作用域&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on December 30, 2013.&lt;/p&gt;</content>
 </entry>
 
 
