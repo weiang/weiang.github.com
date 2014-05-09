@@ -63,6 +63,6 @@ Here are some photos I took when I was rode around Taiwan island.
 
 <figure>
 <img src="/images/sceen1.jpg">
-<figcaption> Easthen </figcaption>
+<figcaption> East Cosat of Taiwan </figcaption>
 <img src="/images/sceen3.jpg">
 </figure>
