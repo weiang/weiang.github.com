@@ -52,7 +52,7 @@ Here list some books I have read during my college time.
 ### Others
 - [程序员的自我修养-链接,装载与库]()
 - [浪潮之颠]()
-- [Mactalk人生元编程]()
+- [MacTalk人生元编程]()
 
 ## Bike Riding
 Here are some photos I took when I was rode around Taiwan island.
@@ -63,6 +63,6 @@ Here are some photos I took when I was rode around Taiwan island.
 
 <figure>
 <img src="/images/sceen1.jpg">
-<figcaption> East Cosat of Taiwan </figcaption>
+<figcaption> East Coast of Taiwan </figcaption>
 <img src="/images/sceen3.jpg">
 </figure>
