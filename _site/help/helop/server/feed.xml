@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">AngWei's homepage</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="https://weiang.github.com/feed.xml" />
+<link rel="alternate" type="text/html" href="https://weiang.github.com" />
+<updated>2014-06-09T21:37:30+08:00</updated>
+<id>https://weiang.github.com/</id>
+<author>
+  <name>Ang Wei</name>
+  <uri>https://weiang.github.com/</uri>
+  <email>weiang123@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Singleton Pattern]]></title>
+  <link rel="alternate" type="text/html" href="https://weiang.github.com/Singleton-Pattern/" />
+  <id>https://weiang.github.com/Singleton-Pattern</id>
+  <updated>2014-05-03T00:00:00-00:00</updated>
+  <published>2014-05-03T00:00:00+08:00</published>
+  
+  <author>
+    <name>Ang Wei</name>
+    <uri>https://weiang.github.com</uri>
+    <email>weiang123@gmail.com</email>
+  </author>
+  <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Singleton Pattern&lt;/strong&gt; 
+  Ensure a class only has one instance and provide a global point of access to it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;singleton&quot;&gt;为什么需要Singleton模式&lt;/h2&gt;
+&lt;p&gt;定义类的唯一目的就是可以用它作为模板来创建对象,而利用Singleton模式实现的类只创建和维护一个对象,这是不是有违定义类的初衷?其实不然,多数情况下类存在的目的是以其为模板创建该类对象的实例,而某些特定的引用场合下,如果一个类存在多个实例对象可能会对系统产生负面影响,甚至导致错误的发生.如在针对操作系统线程池的应用中,如果系统中存在多个线程池显然是错误的.当然有时系统中存在多个对象并不发生错误,但可能占用过多的系统资源导致资源利用率不高,这些都不是我们期望发生的,所以在面向对象的编程中引入了Singleton模式来解决这些问题.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;singleton-1&quot;&gt;单线程下的Singleton模式&lt;/h2&gt;
+
+&lt;p&gt;在不考虑多线程的情况下,有一种简单直观的实现方式,如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Singleton {
+    private static Singleton uniqueInstance;
+    
+    private Singleton() {}
+    
+    public static Singleton getInstance() {
+        if (uniqueInstance == null) {
+            uniqueInstance = new Singleton();
+        }
+        return uniqueInstance;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里有几点需要说明&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Singleton类使用一个静态私有的变量(uniqueInstance)来引用这个唯一的实例对象.&lt;/li&gt;
+  &lt;li&gt;将Singleton类的构造函数声明为private来阻止其他类来创建该类的对象.&lt;/li&gt;
+  &lt;li&gt;通过类方法getInstance()来引用这个唯一的对象.当第一次调用这个方法时,由于该类对象还没有创建,需先创建.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;singleton-2&quot;&gt;多线程下的Singleton模式&lt;/h2&gt;
+&lt;p&gt;上节中的实现并不是线程安全的.所谓线程安全是指多线程模型下程序也能正确运行.那什么是多线程呢?即一个进程中存在多个共享数据的执行流同时在执行.在这种程序执行模型下,由于线程之间共享数据,这时就不得不考虑他们直接对数据的访问顺序对程序逻辑正确性的影响.带着这样的考量,我们来重新审视之前关于Singleton模式的实现.
+  考虑这样一种情景,一个进程中两个线程同时调用getInstance()方法来引用唯一的实例对象,而在这之前实例对象还未被创建.存不存在一种线程执行序列创建多于一个的实例对象?不妨令两个线程A和B,在A线程执行完if条件句发现还没有实例对象被创建时,它将执行之后的创建语句.而在执行创建语句之前B线程也执行if条件句,由于这是实例对象还没被创建,所以B线程也会执行之后的创建语句.这样就创建两个实例对象了,这显然不是我们预料之中的.那么怎样解决这个问题呢?下面是三种常见的做法,需要根据具体的应用情景来选择合适的方案.&lt;/p&gt;
+
+&lt;h3 id=&quot;getinstancesynchronize&quot;&gt;1. 将getInstance()声明为&lt;em&gt;synchronize&lt;/em&gt;方法&lt;/h3&gt;
+&lt;p&gt;通过将getInstance()声明为&lt;em&gt;synchronize&lt;/em&gt;方法可以保证不同线程在调用getInstance()方法时只有一个可以执行，其他的线程等待执行该方法的线程完成,这时显然已经创建新的实例对象了,之后线程执行if语句时不可能为真,即不可能执行之后的创建语句.&lt;/p&gt;
+
+&lt;p&gt;这种实现的优点是:简单,通用.但缺点也非常明显:同步的代价是巨大的,它会大大降低了程序的运行效率(某些情况下可使程序的运行效率降低100倍).因为这种方案没有考虑只须在实例对象未创建的时候调用getInstance()需要这种同步操作,一旦实例变量创建之后,getInstance()方法的唯一作用就是返回该实例对象的引用,这时这种同步操作就显得多余而且效率低下了.所以只有当不太关心getInstance()方法的性能对程序运行效率的影响时才采用这种方法.&lt;/p&gt;
+
+&lt;h3 id=&quot;singletongetinstance&quot;&gt;2. 尽早的创建Singleton中唯一的实例对象,而不是把这任务交给getInstance()方法来完成&lt;/h3&gt;
+&lt;p&gt;这种做法是在Singleton类被载入时就由&lt;strong&gt;JVM&lt;/strong&gt;来完成对唯一对象的实例化.具体实现如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Singleton {
+    private static Singleton uniqueInstance = new Singleton();
+    
+    private Singleton() {}
+    
+    public static Singleton getInstance() {
+        return uniqueInstance;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样做的好处也是显而易见的:将创建对象的任务交给&lt;strong&gt;JVM&lt;/strong&gt;在载入对象时完成,有效的避免了多个线程竞争调用getInstance()方法创建对象现象的发生(这里可能引入其他问题,后面有讨论).但过早的创建对象也是有代价的,特别是当Singleton对象占用系统稀缺资源如线程池,cache等时.过早的创建这些对象占用系统资源可能会造成资源使用率不高的现象.&lt;/p&gt;
+
+&lt;h3 id=&quot;getinstance&quot;&gt;3. 采用双锁来减少线程在调用getInstance()方法时的等待&lt;/h3&gt;
+&lt;p&gt;这种方案从某种程度上来说时针对方案一中线程调用getInstance()方法时等待过长的改进.具体实现如下:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Singleton {
+    private volatile static Singleton uniqueInstance;
+    
+    private Singleton() {}
+    
+    public static Singleton getInstance() {
+        if (uniqueInstance == null) {
+            synchronize (Singleton.class);
+            if (uniqueInstance == null) {
+                uniqueInstance = new Singleton();
+            }
+        }
+        return uniqueInstance;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;相较方案一,getInstance()方法已不在是&lt;em&gt;synchronize&lt;/em&gt;方法了,多个线程可以同时调用并执行它,只有当Singleton对象还未创建时(第一个if语句为真)其他线程才需要等待.并且一旦对象创建之后再也不会执行同步语句(第一个if语句恒为假).有效的消除了对象创建后调用getInstance()时额外的线程等待开销对程序性能的影响.但是相较方案一而言程序的复杂度稍有提高.&lt;/p&gt;
+
+&lt;p&gt;以上三种方案实现的Singleton类都是线程安全的,并且能够按照我们的预期行为.所以三种方案都可应用于具体应用中,具体采用那种当根据特定应用的特点来选择合适的方案.如为了保证应用的简洁性而效率又不是很重要时可采用方案一.当Singleton类所占资源不是系统的稀缺资源时可以采用方案二.当应用程序很关心性能和资源的使用率时,可采用较复杂的方案三.&lt;/p&gt;
+
+&lt;p&gt;另外,这里还有一点需要交代.上述方案二的正确性是建立在只有一个class loader的前提下的.不排除存在两个class loader同时载入Singleton类,这时系统中就同时存在两个Singleton对象了,这并不是我们想要的.  &lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;总结&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Singleton模式保证系统中某个类最多存在一个对象.&lt;/li&gt;
+  &lt;li&gt;Java对Singleton模式的实现使用了private构造器,static方法和static变量.&lt;/li&gt;
+  &lt;li&gt;多线程应用下实现Singleton模式时要选择合适的方案来满足性能和资源的限制.&lt;/li&gt;
+  &lt;li&gt;当你的应用中使用了过多的Singleton模式时,你应该停下来考虑你的设计是否合理.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Singleton-Pattern/&quot;&gt;Singleton Pattern&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on May 03, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[国立台湾科技大学交换生活体会]]></title>
+  <link rel="alternate" type="text/html" href="https://weiang.github.com/%E5%8F%B0%E6%B9%BE%E4%BA%A4%E6%8D%A2/" />
+  <id>https://weiang.github.com/台湾交换</id>
+  <updated>2014-02-10T00:00:00-00:00</updated>
+  <published>2014-02-10T00:00:00+08:00</published>
+  
+  <author>
+    <name>Ang Wei</name>
+    <uri>https://weiang.github.com</uri>
+    <email>weiang123@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;从台湾回来已经一个多月了，但回想起在台湾生活的四个多月时光，历历在目，仿佛发生在昨天般清晰
+。从一开始焦躁地等待来台手续的办理，到来后头一段时间的慢慢适应与探索，再到学习生活慢慢上正轨、参与各种学术活动、四处体验风土人情，一直到最后与在台湾的老师和朋友们依依不舍的聚会与道别，在台湾的四个月给我留下了数不尽的难忘的回忆。&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;学习氛围&lt;/h1&gt;
+&lt;p&gt;台科大乃至台湾给人印象最深的就是自由，这个“自由”的字眼不是空洞的概念，从进入
+台科大第二天便看到一千多个包罗万象的社团，其中不乏如同志社、时务社等特别的社团为开
+始，之后，自由渗透入每天的生活当中。没有熄灯制度，选课高度自由，研究所的课程也对高年级大学部学生开放，就一些敏感事件的自由表达等等，网络的全面信息自由，总之处处都能体会到自由的滋味。
+单单有自由的学术环境也还不够，台科大也给学生提供了比较多的辅导。有心理方面的辅
+导，如心理健康月的活动，内容包括处理新进大学的压力，如何谈恋爱等等，学术上也有如
+学习方法的辅导、文书写作的指导等等，此外大部分老师都很欢迎同学与他们进行课堂或者
+课后的交流，office hour 基本不是摆设。从众位老师身上看到的对学术简单而快乐的追求，使得继续读书并追求学术上的卓越显得不再是那么朦胧不清的选项，而只是人类追寻知识的本能的延伸而已。对于交换生这样一个群体，我们还会常常接触OIA 里的职员，他们没有大陆教学秘书那样让人恐惧的态度，反而亲切得让你感动，一切略显繁琐的手续都会为我们考虑到，还会很贴心的送上节日祝福或是游玩资讯。在学校里除了你自己以外真的很难找到生气的理由，怎能不爱上这样的环境？&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;风土人情&lt;/h1&gt;
+
+&lt;p&gt;在台湾生活了半年，回来之后真的有些许的不适应了，再也听不到一进去商店就会听到好听的欢迎光临，上公车的时候也听不到你好下车的时候也没有谢谢了。说到台湾，让我印象特别深刻的就是台湾人的热情。每次出去外边坐公车，我们在车站讨论坐什么车的时候旁边就会有好心的人跟你说坐什么车可以啊等，很耐心的告诉你跟你交谈，在公车上的时候也经常有人听到我们是大陆的口音然后主动跟你交流，会让你觉得台湾的人民都好热心。在合肥基本上公车的司机跟乘客是没有什么交集的，然而在台湾很不一样，每次你上公车，司机都会每个人都对他说你好，下车会跟你说谢谢，或许你会觉得没有什么，但是能把一个如此简单的事情一直这样依然很有热情很有耐心的坚持下去真的不是那么简单的事情。让我印象深刻的还有一次，我和朋友在火车站买TR-PASS学生套票的时候，我们还没看说明然后无意中说出一句这个怎么坐车啊，然后有个好心的阿姨跑过来问你们是不是不会坐？然后就和热心的告诉我们，当时真的是感动到了。在台湾生活，你根本就不会觉得自己是孤单的，不管是在学校里面还是在校园外边，你都会被一股浓厚的人情味所包围。 
+  来过台湾的人对台湾印象很深刻的应该级是到处都有的机车吧，这个确实是台湾的一道独特的风景。还有就是7-eleven和全家便利店到处都是，即使是阿里山上你也可以找到，特别的方便。当然，来了台湾不得不说的就是台湾的夜市了。基本上每个地方都有自己的夜市，一到晚上，那可是人潮涌动，基本上我们去夜市买东西就会看到那家店排长龙就会跟着去排，台湾奶茶，鸡扒什么的都超级赞的，我觉得离开台湾之后很不习惯的一点也还包括台湾的夜市吧。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-2&quot;&gt;风景名胜&lt;/h1&gt;
+
+&lt;p&gt;当初想要来台湾交换的其中一个很大的原因也就是对美丽岛的向往，对台湾的美丽景色的向往。曾经只能在书本上总是出现的阿里山，日月潭，这次自己可以亲自的去看到，那真的是不一样的感受啊。
+  交换生们有个很大的共同点就是会在周末或者放长假的时候一起出去游玩，一群人说说笑笑一起游玩真的是一件很开心的事情。去过台湾的很多地方，台北的101大楼，总统府，故宫博物馆，台中的台湾美术馆，花莲的太鲁阁，垦丁的海滩，南投的日月潭，嘉义的阿里山等好多好玩又美丽的地方，而且认识了好多交换生朋友。旅行的意义在于出去感受大自然的风光或者是接受一些人文的熏陶，同时和当地的居民交流开阔自己的视野让自己了解更多。在台湾游玩的过程当中，自己也慢慢学会开始处理遇到的一些问题，和不同的人之间的交流，总觉得这是一件非常有意义的事情。台湾的景色很美，美的让我不忍离去，去过两次日月潭， 难忘那碧绿的湖水，难忘环潭骑车的悠闲，现在回到大陆了，想起那段时光，总会嘴角微微上扬，那就是年轻的我们，那年那些日子，我们一起游玩过的的美丽岛。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-3&quot;&gt;结语&lt;/h1&gt;
+&lt;p&gt;在台湾的时光是短暂的，但是这段时光确实高度浓缩了的，四个多月的时间里由好奇心到
+真正喜欢上这片土地上生活的人，这样一个转变因为自由、坦诚的环境而显得自然而然。这
+里没有异乡的陌生感和孤独感，在台湾经历的点点滴滴定会成为我记忆中不可磨灭的一页。&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/%E5%8F%B0%E6%B9%BE%E4%BA%A4%E6%8D%A2/&quot;&gt;国立台湾科技大学交换生活体会&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Ruby中变量的作用域]]></title>
+  <link rel="alternate" type="text/html" href="https://weiang.github.com/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/" />
+  <id>https://weiang.github.com/Ruby变量作用域</id>
+  <updated>2014-05-04T00:00:00-00:00</updated>
+  <published>2013-12-30T00:00:00+08:00</published>
+  
+  <author>
+    <name>Ang Wei</name>
+    <uri>https://weiang.github.com</uri>
+    <email>weiang123@gmail.com</email>
+  </author>
+  <content type="html">&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;Contents&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;div id=&quot;drawer&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#variable-scope&quot;&gt;1 什么是变量作用域(variable scope)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ruby&quot;&gt;2 检查Ruby中的变量作用域&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubylocal-variables&quot;&gt;3 Ruby局部变量(local variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubyglobal-variables&quot;&gt;4 Ruby全局变量(global variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubyclass-variables&quot;&gt;5 Ruby类变量(class variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubyinstance-variables&quot;&gt;6 Ruby实例变量(instance variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rubyconstant-variabes&quot;&gt;7 Ruby常量变量(constant variabes)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- /#table-of-contents --&gt;
+
+&lt;h2 id=&quot;variable-scope&quot;&gt;1 什么是变量作用域(variable scope)&lt;/h2&gt;
+&lt;p&gt;作用域定义了一个变量在程序中的可访问范围。Ruby中有四种类型的变量作用域：&lt;em&gt;局部(local),全局(global),实例(instance)和类(class)&lt;/em&gt;。通过在变量名前加上不同的特殊字符来声明不同的变量类型。如下表：&lt;/p&gt;
+&lt;table&gt; 
+	&lt;tr&gt;
+		&lt;td&gt;变量名前缀&lt;/td&gt;
+		&lt;td&gt;作用域&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;$&lt;/td&gt;
+		&lt;td&gt;全局变量&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;@&lt;/td&gt;
+		&lt;td&gt;实例变量&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;[a-z]或_&lt;/td&gt;
+		&lt;td&gt;局部变量&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;[A-Z]&lt;/td&gt;
+		&lt;td&gt;常量&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;@@&lt;/td&gt;
+		&lt;td&gt;类变量&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;除此之外，Ruby还有两个不能被赋值的&lt;em&gt;伪变量(pseudo-variables)&lt;/em&gt;，&lt;em&gt;nil&lt;/em&gt;和&lt;em&gt;self&lt;/em&gt;。&lt;em&gt;nil&lt;/em&gt;用来表示未初始化的变量，&lt;em&gt;self&lt;/em&gt;用来引用正在执行的对象。&lt;/p&gt;
+
+&lt;h2 id=&quot;ruby&quot;&gt;2 检查Ruby中的变量作用域&lt;/h2&gt;
+&lt;p&gt;通过观察变量名可以区分不同变量的作用域。但有些时候需要通过编程的方式来获得一个变量的作用域。Ruby提供了一个有效的函数&lt;em&gt;define?&lt;/em&gt;来达到这个目的。&lt;em&gt;define?&lt;/em&gt;函数返回被引用变量的作用域。如果变量在当前上下文(current context)中没用被定义，则&lt;em&gt;define?&lt;/em&gt;返回&lt;em&gt;nil&lt;/em&gt;。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;x = 10
+=&amp;gt; 10
+defined? x
+=&amp;gt; &quot;local-variable&quot;
+
+$x = 10
+=&amp;gt; 10
+defined? $x
+=&amp;gt; &quot;global-variable&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;rubylocal-variables&quot;&gt;3 Ruby局部变量(local variables)&lt;/h2&gt;
+&lt;p&gt;局部变量只在声明它的代码结构中可以被存取。例如，在方法(method)或循环结构(loop)中声明的变量不可以从该结构之外存取。局部变量名必须以小写字母或’_‘开头。例如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;loopcounter = 10
+_LoopCounter = 20
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;rubyglobal-variables&quot;&gt;4 Ruby全局变量(global variables)&lt;/h2&gt;
+&lt;p&gt;全局变量可在任何地方被存取，即使在全局变量被声明之前。全局变量名必须以’$’为前缀。例如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$welcone = &quot;Welcone to Ruby Essentials&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;但使用全局变量是不被鼓励的。全局变量的问题在于：不仅它在代码的任何地方可见，而且它可以在代码的任何地方被修改。这会使得追踪’bugs’变得非常困难。
+但是，了解一些Ruby预定义的全局变量是大有好处的。这些全局变量可以帮助Ruby开发者了解当前的Ruby开发环境。这里有张关于这些全局变量的简要总结：&lt;/p&gt;
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;变量名&lt;/td&gt;
+		&lt;td&gt;变量值&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr /&gt;
+		&lt;td&gt;$@&lt;/td&gt;
+		&lt;td /&gt;最近发生错误的位置
+	&lt;tr /&gt;
+		&lt;td /&gt;$_
+		&lt;td /&gt;上一次被gets读取的字符串
+	&lt;tr /&gt;
+		&lt;td /&gt;$.
+		&lt;td /&gt;解释器上一次读取的行号
+	&lt;tr /&gt;
+		&lt;td /&gt;$&amp;amp;
+		&lt;td /&gt;上一次被regexp匹配的字符串
+	&lt;tr /&gt;
+		&lt;td /&gt;$~
+		&lt;td /&gt;上一次作为字表达式数组匹配的regexp
+	&lt;tr /&gt;
+		&lt;td /&gt;$n
+		&lt;td /&gt;上一次匹配中的第n个子表达式(等同于$~[n])
+	&lt;tr /&gt;
+		&lt;td /&gt;$=
+		&lt;td /&gt;大小写无关标志
+	&lt;tr /&gt;
+		&lt;td /&gt;$/
+		&lt;td /&gt;输入记录分割符
+	&lt;tr /&gt;
+		&lt;td /&gt;$\
+		&lt;td /&gt;输出记录分割符
+	&lt;tr /&gt;
+		&lt;td /&gt;$0
+		&lt;td /&gt;正在执行的Ruby脚本名
+	&lt;tr /&gt;
+		&lt;td /&gt;$*
+		&lt;td /&gt;调用脚本是的命令行参数
+	&lt;tr /&gt;
+		&lt;td /&gt;$$
+		&lt;td /&gt;Ruby解释器的pid(进程号)
+	&lt;tr /&gt;
+		&lt;td /&gt;$?
+		&lt;td /&gt;上一个执行子进程的退出状态
+&lt;/table&gt;
+&lt;p&gt;例如，执行&lt;em&gt;gets&lt;/em&gt;方法来从键盘获取输入，再用$_变量来提取从键盘键入的值：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;irb(main):005:0&amp;gt;gets
+hello
+=&amp;gt; &quot;hello\n&quot;
+irb(main):006:0&amp;gt;$_
+=&amp;gt; &quot;hello\n&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当然也可以获得Ruby解释器的进程号：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;irb(main):007:0&amp;gt;$$
+=&amp;gt; 17403
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;rubyclass-variables&quot;&gt;5 Ruby类变量(class variables)&lt;/h2&gt;
+&lt;p&gt;类变量被该类所实例化的所有对象共享。这意味着只有一个变量存在，而这个变量为所有实例对象所共享。这也意味着一个对象对该变量的修改也会改变其他实例对象的该变量值。
+另一种观点将类变量看成是一个单独类中的全局变量。类变量的声明必须以’@@’为前缀。类变量必须在创建时初始化。例如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@@total = 0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;rubyinstance-variables&quot;&gt;6 Ruby实例变量(instance variables)&lt;/h2&gt;
+&lt;p&gt;实例变量和类变量很类似，只是实例变量为特定实例对象所私有。例如如果一个类包含一个实例变量，&lt;em&gt;@total&lt;/em&gt;，如果一个实例对象改变了&lt;em&gt;@total&lt;/em&gt;的值，这个改变只局限于改变这个变量的类实例对象中。其他的同类对象拥有自己私有的，独立于其他对象的对其改变的副本。
+Ruby中实例变量以’@’为前缀：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@total = 10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;rubyconstant-variabes&quot;&gt;7 Ruby常量变量(constant variabes)&lt;/h2&gt;
+&lt;p&gt;Ruby中的常量是一旦被赋值后就不“应该”被改变的变量。但是Ruby不同于大多数编程语言，它允许常量在声明后依然可以被修改。Ruby解释器只是弹出一个警告信息来表示轻微的抗议。
+声明在类或模块(module)中的常量可以在类或模块的上下文中的任何地方使用。声明在类和模块之外的常量具有全局作用域。&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/&quot;&gt;Ruby中变量的作用域&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on December 30, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[G++'s two-stage name lookup]]></title>
+  <link rel="alternate" type="text/html" href="https://weiang.github.com/Reserved/gs-two-stage-name-lookup/" />
+  <id>https://weiang.github.com/Reserved/gs-two-stage-name-lookup</id>
+  <published>2013-12-17T00:00:00+08:00</published>
+  <updated>2013-12-17T00:00:00+08:00</updated>
+  <author>
+    <name>Ang Wei</name>
+    <uri>https://weiang.github.com</uri>
+    <email>weiang123@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;转自:&lt;a href=&quot;http://gcc.gnu.org/onlinedocs/gcc/Name-lookup.html&quot;&gt;http://gcc.gnu.org/onlinedocs/gcc/Name-lookup.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The C++ standard prescribes that all names that are not dependent on template parameters are bound to their present definitions when parsing a template function or class. Only names that are dependent are looked up at the point of instantiation. For example, consider&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   void foo(double);
+ 
+   struct A {
+     template &amp;lt;typename T&amp;gt;
+     void f () {
+       foo (1);        // 1
+       int i = N;      // 2
+       T t;
+       t.bar();        // 3
+       foo (t);        // 4
+     }
+ 
+     static const int N;
+   };
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here, the names foo and N appear in a context that does not depend on the type of T. The compiler will thus require that they are defined in the context of use in the template, not only before the point of instantiation, and will here use ::foo(double) and A::N, respectively. In particular, it will convert the integer value to a double when passing it to ::foo(double).&lt;/p&gt;
+
+&lt;p&gt;Conversely, bar and the call to foo in the fourth marked line are used in contexts that do depend on the type of T, so they are only looked up at the point of instantiation, and you can provide declarations for them after declaring the template, but before instantiating it. In particular, if you instantiate A::f&lt;int&gt;, the last line will call an overloaded ::foo(int) if one was provided, even if after the declaration of struct A.&lt;/int&gt;&lt;/p&gt;
+
+&lt;p&gt;This distinction between lookup of dependent and non-dependent names is called two-stage (or dependent) name lookup. G++ implements it since version 3.4.&lt;/p&gt;
+
+&lt;p&gt;Two-stage name lookup sometimes leads to situations with behavior different from non-template codes. The most common is probably this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   template &amp;lt;typename T&amp;gt; struct Base {
+     int i;
+   };
+ 
+   template &amp;lt;typename T&amp;gt; struct Derived : public Base&amp;lt;T&amp;gt; {
+     int get_i() { return i; }
+   }; In get_i(), i is not used in a dependent context, so the compiler will look for a name declared at the enclosing namespace scope (which is the global scope here). It will not look into the base class, since that is dependent and you may declare specializations of Base even after declaring Derived, so the compiler can't really know what i would refer to. If there is no global variable i, then you will get an error message.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In order to make it clear that you want the member of the base class, you need to defer lookup until instantiation time, at which the base class is known. For this, you need to access i in a dependent context, by either using this-&amp;gt;i (remember that this is of type Derived&lt;t&gt;*, so is obviously dependent), or using Base&lt;t&gt;::i. Alternatively, Base&lt;t&gt;::i might be brought into scope by a using-declaration.&lt;/t&gt;&lt;/t&gt;&lt;/t&gt;&lt;/p&gt;
+
+&lt;p&gt;Another, similar example involves calling member functions of a base class:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   template &amp;lt;typename T&amp;gt; struct Base {
+       int f();
+   };
+ 
+   template &amp;lt;typename T&amp;gt; struct Derived : Base&amp;lt;T&amp;gt; {
+       int g() { return f(); };
+   }; Again, the call to f() is not dependent on template arguments (there are no arguments that depend on the type T, and it is also not otherwise specified that the call should be in a dependent context). Thus a global declaration of such a function must be available, since the one in the base class is not visible until instantiation time. The compiler will consequently produce the following error message:
+
+   x.cc: In member function `int Derived&amp;lt;T&amp;gt;::g()':
+   x.cc:6: error: there are no arguments to `f' that depend on a template
+      parameter, so a declaration of `f' must be available
+   x.cc:6: error: (if you use `-fpermissive', G++ will accept your code, but
+      allowing the use of an undeclared name is deprecated) To make the code valid either use this-&amp;gt;f(), or Base&amp;lt;T&amp;gt;::f(). Using the -fpermissive flag will also let the compiler accept the code, by marking all function calls for which no declaration is visible at the time of definition of the template for later lookup at instantiation time, as if it were a dependent call. We do not recommend using -fpermissive to work around invalid code, and it will also only catch cases where functions in base classes are called, not where variables in base classes are used (as in the example above).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that some compilers (including G++ versions prior to 3.4) get these examples wrong and accept above code without an error. Those compilers do not implement two-stage name lookup correctly.&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Reserved/gs-two-stage-name-lookup/&quot;&gt;G++'s two-stage name lookup&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on December 17, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Finding Comments in Source Code Using Regular Expressions]]></title>
+  <link rel="alternate" type="text/html" href="https://weiang.github.com/Reserved/finding-comments-in-source-code-using-regular-expressions/" />
+  <id>https://weiang.github.com/Reserved/finding-comments-in-source-code-using-regular-expressions</id>
+  <published>2013-11-08T00:00:00+08:00</published>
+  <updated>2013-11-08T00:00:00+08:00</updated>
+  <author>
+    <name>Ang Wei</name>
+    <uri>https://weiang.github.com</uri>
+    <email>weiang123@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://ostermiller.org/findcomment.html&quot;&gt;http://ostermiller.org/findcomment.html&lt;/a&gt;&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Reserved/finding-comments-in-source-code-using-regular-expressions/&quot;&gt;Finding Comments in Source Code Using Regular Expressions&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on November 08, 2013.&lt;/p&gt;</content>
+</entry>
+
+</feed>
