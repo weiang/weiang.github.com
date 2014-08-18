@@ -15,9 +15,8 @@ image:
 My name is Ang Wei. Now I'm a third year undergraduate student at [University of Science and Technology of China](http://www.ustc.edu.cn). My major is [Computer Science and Technology](http://cs.ustc.edu.cn).
 
 # Research Interest
-
-My research interests are in the area of artifical intelligence and data mining. Especially, I am interested in developing techniques that can be applied to real world domains and make our life easier.
-
+## Artificial Intelligence
+## Data Mining
 
 Here is my [CV](../pdf/AngWei-CV-rs.pdf).
 
