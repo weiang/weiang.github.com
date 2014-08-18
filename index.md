@@ -22,8 +22,7 @@ image:
 	<li/><strong> Data Mining</strong>
 </ul>
 
-Here is my [CV](../pdf/AngWei_Update.pdf).
-
+Here is my [CV](../pdf/AngWei_Update.pdf) and [Academic Transcript](../pdf/transcript.html).
 
 
 
