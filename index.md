@@ -12,7 +12,7 @@ image:
   creditlink: http://texturelovers.com
 ---
 
-<h2>Student<br></h2>
+<strong>Undergraduate<br></strong>
 <a href="http://cs.ustc.edu.cn/">School of Computer Science and Technology</a><br>
 <a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>
 
