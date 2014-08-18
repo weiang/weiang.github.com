@@ -16,20 +16,14 @@ image:
 <table width="860"  border="0" align="center" cellspacing="10">
   <tr>
   	<td>
-    <table border=0 cellpadding=0 cellspacing=0>
     <tr>
-
       <td>
-        <!-- <big><big><big><b>Ang Wei</b></big></big></big> -->
-        <h1>Wei Ang</h1>
         <p>
         	  Student<br>
         	  <a href="http://cs.ustc.edu.cn/">School of Computer Science and Technology</a><br>
             <a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>
         <p>
         <br>
-
-        <table border=0 cellpadding=0 cellspacing=0>
           <tr>
 	    <td><strong>Address:</strong><br>
 	        96 Jin Zhai Road<br>
@@ -40,18 +34,13 @@ image:
 	        <strong>Phone: </strong> <br>
 	        <strong>Email: </strong> <br>
 	    </td>
-	    <td>&nbsp </td>
 	    <td><br>
 	        +86-18656132104<br>
 	        weiang@mail.ustc.edu.cn<br>
  	    </td>
           </tr> 
-        </table>
       </td>
     </tr>
-    </table>
-      <br><br>
-    </td>
   </tr>
 </table>
 
