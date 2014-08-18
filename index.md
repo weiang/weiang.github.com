@@ -22,11 +22,11 @@ image:
 	        96 Jin Zhai Road<br>
 	        University of Science and Technology of China<br>
 	        Hefei, Anhui 230027, China<br>
-      	</td>
-	<td><br>
+    </td>
+	<td>	<br>
 	        <strong>Phone: </strong> <br>
 	        <strong>Email: </strong> <br>
-	<td><br>
+	<td>	<br>
 	        +86-18656132104<br>
 	        weiang@mail.ustc.edu.cn<br>
  	</td>
@@ -34,8 +34,8 @@ image:
 
 <h1> Research Interest </h1>
 <ul>
-	<li/> Artificial Intelligence
-	<li/> Data Mining
+	<li/><strong> Artificial Intelligence </strong>
+	<li/><strong> Data Mining</strong>
 </ul>
 
 Here is my [CV](../pdf/AngWei-CV-rs.pdf).
