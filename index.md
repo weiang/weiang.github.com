@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: Wei Ang
 tagline: Minimal Mistakes, a Jekyll Theme
 tags: [about, Jekyll, theme, responsive]
 modified: 1-5-2014
