@@ -13,16 +13,15 @@ image:
 ---
 
 # Contact
-<table width="860"  border="0" align="center" cellspacing="10">
-  <tr>
-  	<td>
-    <tr>
-      <td>
-        <p>
-        	  Student<br>
-        	  <a href="http://cs.ustc.edu.cn/">School of Computer Science and Technology</a><br>
-            <a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>
-        <p>
+<tr>
+	<td>
+    	<tr>
+      		<td>
+        		<p>
+        	  		Student<br>
+        	  		<a href="http://cs.ustc.edu.cn/">School of Computer Science and Technology</a><br>
+            		<a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>
+        		<p>
         <br>
           <tr>
 	    <td><strong>Address:</strong><br>
