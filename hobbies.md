@@ -55,14 +55,19 @@ Here list some books I have read during my college time.
 - [MacTalk人生元编程]()
 
 ## Bike Riding
-Here are some photos I took when I was rode around Taiwan island.
+Here are some photos I took when I was biking around the Taiwan island.
+
 <figure> 
 <figcaption> Biking on the Road </figcaption>
 <img src="/images/bikeriding1.jpg">
 </figure>
 
 <figure>
+<figcaption> South-Link Highway
 <img src="/images/sceen1.jpg">
-<figcaption> East Coast of Taiwan </figcaption>
+</figure>
+
+<figure>
+<figcaption> Eastern Coast of Taiwan island </figcaption>
 <img src="/images/sceen3.jpg">
 </figure>
