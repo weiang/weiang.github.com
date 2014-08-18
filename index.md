@@ -16,6 +16,14 @@ image:
 <a href="http://cs.ustc.edu.cn/">School of Computer Science and Technology</a><br>
 <a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>
 
+<h1> Research Interest </h1>
+<ul>
+	<li/><strong> Artificial Intelligence </strong>
+	<li/><strong> Data Mining</strong>
+</ul>
+
+Here is my [CV](../pdf/AngWei_Update.pdf).
+
 <h1>Contact</h1>
 <table>
 	<td><strong>Address:</strong><br>
@@ -31,13 +39,5 @@ image:
 	        weiang@mail.ustc.edu.cn<br>
  	</td>
 </table>
-
-<h1> Research Interest </h1>
-<ul>
-	<li/><strong> Artificial Intelligence </strong>
-	<li/><strong> Data Mining</strong>
-</ul>
-
-Here is my [CV](../pdf/AngWei_Update.pdf).
 
 
