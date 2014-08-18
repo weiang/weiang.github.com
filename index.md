@@ -38,6 +38,6 @@ image:
 	<li/><strong> Data Mining</strong>
 </ul>
 
-Here is my [CV](../pdf/AngWei-CV-rs.pdf).
+Here is my [CV](../pdf/AngWei_Update.pdf).
 
 
