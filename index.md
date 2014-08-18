@@ -12,35 +12,24 @@ image:
   creditlink: http://texturelovers.com
 ---
 
+Student<br>
+<a href="http://cs.ustc.edu.cn/">School of Computer Science and Technology</a><br>
+<a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>
+
 # Contact
-<tr>
-	<td>
-    	<tr>
-      		<td>
-        		<p>
-        	  		Student<br>
-        	  		<a href="http://cs.ustc.edu.cn/">School of Computer Science and Technology</a><br>
-            		<a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>
-        		<p>
-        <br>
-          <tr>
-	    <td><strong>Address:</strong><br>
+<table>
+	<td><strong>Address:</strong><br>
 	        96 Jin Zhai Road<br>
 	        University of Science and Technology of China<br>
 	        Hefei, Anhui 230027, China<br>
-      </td>
-	    <td><br>
+      	</td>
+	<td><br>
 	        <strong>Phone: </strong> <br>
 	        <strong>Email: </strong> <br>
-	    </td>
-	    <td><br>
+	<td><br>
 	        +86-18656132104<br>
 	        weiang@mail.ustc.edu.cn<br>
- 	    </td>
-          </tr> 
-      </td>
-    </tr>
-  </tr>
+ 	</td>
 </table>
 
 # Research Interest
