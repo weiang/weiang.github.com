@@ -12,17 +12,13 @@ image:
   creditlink: http://texturelovers.com
 ---
 
-My name is Ang Wei. Now I'm a third year undergraduate student at [University of Science and Technology of China](http://www.ustc.edu.cn). My major is [Computer Science and Technology](http://cs.ustc.edu.cn).
-
+# Contact
 <table width="860"  border="0" align="center" cellspacing="10">
   <tr>
   	<td>
     <table border=0 cellpadding=0 cellspacing=0>
     <tr>
-      <td>
-		<img src="fxy.jpg" width=166 height=250>
-      </td>
-      <td>&nbsp &nbsp &nbsp &nbsp </td>
+
       <td>
         <!-- <big><big><big><b>Ang Wei</b></big></big></big> -->
         <h1>Wei Ang</h1>
@@ -35,12 +31,11 @@ My name is Ang Wei. Now I'm a third year undergraduate student at [University of
 
         <table border=0 cellpadding=0 cellspacing=0>
           <tr>
-	    <td><strong>Contact:</strong><br>
+	    <td><strong>Address:</strong><br>
 	        96 Jin Zhai Road<br>
 	        University of Science and Technology of China<br>
 	        Hefei, Anhui 230027, China<br>
       </td>
-	    <td>&nbsp &nbsp &nbsp &nbsp </td>
 	    <td><br>
 	        <strong>Phone: </strong> <br>
 	        <strong>Email: </strong> <br>
@@ -59,6 +54,7 @@ My name is Ang Wei. Now I'm a third year undergraduate student at [University of
     </td>
   </tr>
 </table>
+
 # Research Interest
 * Artificial Intelligence
 * Data Mining
