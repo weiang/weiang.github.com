@@ -12,11 +12,11 @@ image:
   creditlink: http://texturelovers.com
 ---
 
-Student<br>
+<h2>Student<br></h2>
 <a href="http://cs.ustc.edu.cn/">School of Computer Science and Technology</a><br>
 <a href="http://en.ustc.edu.cn/">University of Science and Technology of China</a>
 
-# Contact
+<h1>Contact</h1>
 <table>
 	<td><strong>Address:</strong><br>
 	        96 Jin Zhai Road<br>
@@ -32,9 +32,11 @@ Student<br>
  	</td>
 </table>
 
-# Research Interest
-* Artificial Intelligence
-* Data Mining
+<h1> Research Interest </h1>
+<ul>
+	<li/> Artificial Intelligence
+	<li/> Data Mining
+</ul>
 
 Here is my [CV](../pdf/AngWei-CV-rs.pdf).
 
