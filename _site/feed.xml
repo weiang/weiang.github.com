@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">AngWei's homepage</title>
+<title type="text">WeiAng's homepage</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
-<link rel="self" type="application/atom+xml" href="https://weiang.github.com/feed.xml" />
-<link rel="alternate" type="text/html" href="https://weiang.github.com" />
-<updated>2014-06-09T21:41:57+08:00</updated>
-<id>https://weiang.github.com/</id>
+<link rel="self" type="application/atom+xml" href="http://home.ustc.edu.cn/~weiang/feed.xml" />
+<link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang" />
+<updated>2014-08-19T08:42:08+00:00</updated>
+<id>http://home.ustc.edu.cn/~weiang/</id>
 <author>
-  <name>Ang Wei</name>
-  <uri>https://weiang.github.com/</uri>
-  <email>weiang123@gmail.com</email>
+  <name>Wei Ang</name>
+  <uri>http://home.ustc.edu.cn/~weiang/</uri>
+  <email>weiang@mail.ustc.edu.cn</email>
 </author>
 
 
 <entry>
   <title type="html"><![CDATA[Singleton Pattern]]></title>
-  <link rel="alternate" type="text/html" href="https://weiang.github.com/Singleton-Pattern/" />
-  <id>https://weiang.github.com/Singleton-Pattern</id>
-  <updated>2014-05-03T00:00:00-00:00</updated>
-  <published>2014-05-03T00:00:00+08:00</published>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/Singleton-Pattern/" />
+  <id>http://home.ustc.edu.cn/~weiang/Singleton-Pattern</id>
+  <updated>2014-05-3T00:00:00-00:00</updated>
+  <published>2014-05-03T00:00:00+00:00</published>
   
   <author>
-    <name>Ang Wei</name>
-    <uri>https://weiang.github.com</uri>
-    <email>weiang123@gmail.com</email>
+    <name>Wei Ang</name>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
+    <email>weiang@mail.ustc.edu.cn</email>
   </author>
   <content type="html">&lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Singleton Pattern&lt;/strong&gt; 
@@ -127,21 +127,21 @@
 &lt;/ol&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Singleton-Pattern/&quot;&gt;Singleton Pattern&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on May 03, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/Singleton-Pattern/&quot;&gt;Singleton Pattern&lt;/a&gt; was originally published by Wei Ang at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;WeiAng's homepage&lt;/a&gt; on May 03, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[国立台湾科技大学交换生活体会]]></title>
-  <link rel="alternate" type="text/html" href="https://weiang.github.com/%E5%8F%B0%E6%B9%BE%E4%BA%A4%E6%8D%A2/" />
-  <id>https://weiang.github.com/台湾交换</id>
-  <updated>2014-02-10T00:00:00-00:00</updated>
-  <published>2014-02-10T00:00:00+08:00</published>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/%E5%8F%B0%E6%B9%BE%E4%BA%A4%E6%8D%A2/" />
+  <id>http://home.ustc.edu.cn/~weiang/台湾交换</id>
+  <updated>2014-2-10T00:00:00-00:00</updated>
+  <published>2014-02-10T00:00:00+00:00</published>
   
   <author>
-    <name>Ang Wei</name>
-    <uri>https://weiang.github.com</uri>
-    <email>weiang123@gmail.com</email>
+    <name>Wei Ang</name>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
+    <email>weiang@mail.ustc.edu.cn</email>
   </author>
   <content type="html">&lt;p&gt;从台湾回来已经一个多月了，但回想起在台湾生活的四个多月时光，历历在目，仿佛发生在昨天般清晰
 。从一开始焦躁地等待来台手续的办理，到来后头一段时间的慢慢适应与探索，再到学习生活慢慢上正轨、参与各种学术活动、四处体验风土人情，一直到最后与在台湾的老师和朋友们依依不舍的聚会与道别，在台湾的四个月给我留下了数不尽的难忘的回忆。&lt;/p&gt;
@@ -170,21 +170,21 @@
 真正喜欢上这片土地上生活的人，这样一个转变因为自由、坦诚的环境而显得自然而然。这
 里没有异乡的陌生感和孤独感，在台湾经历的点点滴滴定会成为我记忆中不可磨灭的一页。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/%E5%8F%B0%E6%B9%BE%E4%BA%A4%E6%8D%A2/&quot;&gt;国立台湾科技大学交换生活体会&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/%E5%8F%B0%E6%B9%BE%E4%BA%A4%E6%8D%A2/&quot;&gt;国立台湾科技大学交换生活体会&lt;/a&gt; was originally published by Wei Ang at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;WeiAng's homepage&lt;/a&gt; on February 10, 2014.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Ruby中变量的作用域]]></title>
-  <link rel="alternate" type="text/html" href="https://weiang.github.com/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/" />
-  <id>https://weiang.github.com/Ruby变量作用域</id>
-  <updated>2014-05-04T00:00:00-00:00</updated>
-  <published>2013-12-30T00:00:00+08:00</published>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/" />
+  <id>http://home.ustc.edu.cn/~weiang/Ruby变量作用域</id>
+  <updated>2014-05-4T00:00:00-00:00</updated>
+  <published>2013-12-30T00:00:00+00:00</published>
   
   <author>
-    <name>Ang Wei</name>
-    <uri>https://weiang.github.com</uri>
-    <email>weiang123@gmail.com</email>
+    <name>Wei Ang</name>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
+    <email>weiang@mail.ustc.edu.cn</email>
   </author>
   <content type="html">&lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
   &lt;header&gt;
@@ -343,20 +343,20 @@ Ruby中实例变量以’@’为前缀：&lt;/p&gt;
 &lt;p&gt;Ruby中的常量是一旦被赋值后就不“应该”被改变的变量。但是Ruby不同于大多数编程语言，它允许常量在声明后依然可以被修改。Ruby解释器只是弹出一个警告信息来表示轻微的抗议。
 声明在类或模块(module)中的常量可以在类或模块的上下文中的任何地方使用。声明在类和模块之外的常量具有全局作用域。&lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/&quot;&gt;Ruby中变量的作用域&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on December 30, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/Ruby%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/&quot;&gt;Ruby中变量的作用域&lt;/a&gt; was originally published by Wei Ang at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;WeiAng's homepage&lt;/a&gt; on December 30, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[G++'s two-stage name lookup]]></title>
-  <link rel="alternate" type="text/html" href="https://weiang.github.com/Reserved/gs-two-stage-name-lookup/" />
-  <id>https://weiang.github.com/Reserved/gs-two-stage-name-lookup</id>
-  <published>2013-12-17T00:00:00+08:00</published>
-  <updated>2013-12-17T00:00:00+08:00</updated>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/gs-two-stage-name-lookup/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/gs-two-stage-name-lookup</id>
+  <published>2013-12-17T00:00:00+00:00</published>
+  <updated>2013-12-17T00:00:00+00:00</updated>
   <author>
-    <name>Ang Wei</name>
-    <uri>https://weiang.github.com</uri>
-    <email>weiang123@gmail.com</email>
+    <name>Wei Ang</name>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
+    <email>weiang@mail.ustc.edu.cn</email>
   </author>
   <content type="html">&lt;p&gt;转自:&lt;a href=&quot;http://gcc.gnu.org/onlinedocs/gcc/Name-lookup.html&quot;&gt;http://gcc.gnu.org/onlinedocs/gcc/Name-lookup.html&lt;/a&gt;&lt;/p&gt;
 
@@ -392,7 +392,7 @@ Ruby中实例变量以’@’为前缀：&lt;/p&gt;
  
    template &amp;lt;typename T&amp;gt; struct Derived : public Base&amp;lt;T&amp;gt; {
      int get_i() { return i; }
-   }; In get_i(), i is not used in a dependent context, so the compiler will look for a name declared at the enclosing namespace scope (which is the global scope here). It will not look into the base class, since that is dependent and you may declare specializations of Base even after declaring Derived, so the compiler can't really know what i would refer to. If there is no global variable i, then you will get an error message.
+   }; In get_i(), i is not used in a dependent context, so the compiler will look for a name declared at the enclosing namespace scope (which is the global scope here). It will not look into the base class, since that is dependent and you may declare specializations of Base even after declaring Derived, so the compiler can&#39;t really know what i would refer to. If there is no global variable i, then you will get an error message.
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;In order to make it clear that you want the member of the base class, you need to defer lookup until instantiation time, at which the base class is known. For this, you need to access i in a dependent context, by either using this-&amp;gt;i (remember that this is of type Derived&lt;t&gt;*, so is obviously dependent), or using Base&lt;t&gt;::i. Alternatively, Base&lt;t&gt;::i might be brought into scope by a using-declaration.&lt;/t&gt;&lt;/t&gt;&lt;/t&gt;&lt;/p&gt;
@@ -407,35 +407,35 @@ Ruby中实例变量以’@’为前缀：&lt;/p&gt;
        int g() { return f(); };
    }; Again, the call to f() is not dependent on template arguments (there are no arguments that depend on the type T, and it is also not otherwise specified that the call should be in a dependent context). Thus a global declaration of such a function must be available, since the one in the base class is not visible until instantiation time. The compiler will consequently produce the following error message:
 
-   x.cc: In member function `int Derived&amp;lt;T&amp;gt;::g()':
-   x.cc:6: error: there are no arguments to `f' that depend on a template
-      parameter, so a declaration of `f' must be available
-   x.cc:6: error: (if you use `-fpermissive', G++ will accept your code, but
+   x.cc: In member function `int Derived&amp;lt;T&amp;gt;::g()&#39;:
+   x.cc:6: error: there are no arguments to `f&#39; that depend on a template
+      parameter, so a declaration of `f&#39; must be available
+   x.cc:6: error: (if you use `-fpermissive&#39;, G++ will accept your code, but
       allowing the use of an undeclared name is deprecated) To make the code valid either use this-&amp;gt;f(), or Base&amp;lt;T&amp;gt;::f(). Using the -fpermissive flag will also let the compiler accept the code, by marking all function calls for which no declaration is visible at the time of definition of the template for later lookup at instantiation time, as if it were a dependent call. We do not recommend using -fpermissive to work around invalid code, and it will also only catch cases where functions in base classes are called, not where variables in base classes are used (as in the example above).
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Note that some compilers (including G++ versions prior to 3.4) get these examples wrong and accept above code without an error. Those compilers do not implement two-stage name lookup correctly.&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Reserved/gs-two-stage-name-lookup/&quot;&gt;G++'s two-stage name lookup&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on December 17, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/gs-two-stage-name-lookup/&quot;&gt;G++'s two-stage name lookup&lt;/a&gt; was originally published by Wei Ang at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;WeiAng's homepage&lt;/a&gt; on December 17, 2013.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
   <title type="html"><![CDATA[Finding Comments in Source Code Using Regular Expressions]]></title>
-  <link rel="alternate" type="text/html" href="https://weiang.github.com/Reserved/finding-comments-in-source-code-using-regular-expressions/" />
-  <id>https://weiang.github.com/Reserved/finding-comments-in-source-code-using-regular-expressions</id>
-  <published>2013-11-08T00:00:00+08:00</published>
-  <updated>2013-11-08T00:00:00+08:00</updated>
+  <link rel="alternate" type="text/html" href="http://home.ustc.edu.cn/~weiang/reserved/finding-comments-in-source-code-using-regular-expressions/" />
+  <id>http://home.ustc.edu.cn/~weiang/reserved/finding-comments-in-source-code-using-regular-expressions</id>
+  <published>2013-11-08T00:00:00+00:00</published>
+  <updated>2013-11-08T00:00:00+00:00</updated>
   <author>
-    <name>Ang Wei</name>
-    <uri>https://weiang.github.com</uri>
-    <email>weiang123@gmail.com</email>
+    <name>Wei Ang</name>
+    <uri>http://home.ustc.edu.cn/~weiang</uri>
+    <email>weiang@mail.ustc.edu.cn</email>
   </author>
   <content type="html">&lt;p&gt;转自：&lt;a href=&quot;http://ostermiller.org/findcomment.html&quot;&gt;http://ostermiller.org/findcomment.html&lt;/a&gt;&lt;/p&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;https://weiang.github.com/Reserved/finding-comments-in-source-code-using-regular-expressions/&quot;&gt;Finding Comments in Source Code Using Regular Expressions&lt;/a&gt; was originally published by Ang Wei at &lt;a href=&quot;https://weiang.github.com&quot;&gt;AngWei's homepage&lt;/a&gt; on November 08, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://home.ustc.edu.cn/~weiang/reserved/finding-comments-in-source-code-using-regular-expressions/&quot;&gt;Finding Comments in Source Code Using Regular Expressions&lt;/a&gt; was originally published by Wei Ang at &lt;a href=&quot;http://home.ustc.edu.cn/~weiang&quot;&gt;WeiAng's homepage&lt;/a&gt; on November 08, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
